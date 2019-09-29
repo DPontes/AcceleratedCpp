@@ -2,7 +2,10 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::string;
+using std::endl;
 
 int main() {
     // ask for the person"s name
