@@ -24,7 +24,8 @@ int main() {
     cin >> midterm >> final;
 
     // Ask for home work grades
-    cout << "Please enter all your homework grades followed by EoF: ";
+    cout << "Please enter all your homework grades followed by EoF";
+    cout << " (Win: Ctrl+Z / Unix: Ctrl+D): ";
 
     // The number and sum of grades read so far
     int count = 0;
