@@ -29,7 +29,7 @@ int main() {
     vector<double> homework;
     double grade;
     // Invariant `homework` contains all the homework grades read so far
-    while(cin >> grade) { homework.push_back(grade); }
+    while (cin >> grade) { homework.push_back(grade); }
 
     // Check that the student entered some homework grades
     typedef vector<double>::size_type vector_size;
