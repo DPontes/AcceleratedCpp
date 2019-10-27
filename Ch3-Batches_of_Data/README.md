@@ -15,4 +15,4 @@ streamsize prec = cout.precision();
 
 ### 3.2.2 - Generating the output
 
-(From the book) _WHen we include the word `typedef` as part of a definition, we are saying that we want the name that we define to be a synonym for the given type, rather than a variable of that type. [...] Nmes defined via `typedef` have the same scope as any other names._
+(From the book) _When we include the word `typedef` as part of a definition, we are saying that we want the name that we define to be a synonym for the given type, rather than a variable of that type. [...] Nmes defined via `typedef` have the same scope as any other names._
