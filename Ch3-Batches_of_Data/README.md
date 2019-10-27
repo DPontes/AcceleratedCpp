@@ -25,7 +25,7 @@ streamsize prec = cout.precision();
 
 _[...] whenever ordinary integers and unsigned integers combine in an expression, the ordinary integer is converted to unsigned. [...] which means that [the results] cannot be less than zero._
 
-_Every standard-conforming C++ implementation must:
+_Every standard-conforming C++ implementation must:_
 
-- Implement `vector` so that appending a large number of elements to a `vector` is no worse than proportional to the number of elements
-- Implement `sort`to be no slower on average than `n*log(n)`, where `n` is the number of elements being sorted._
+- _Implement `vector` so that appending a large number of elements to a `vector` is no worse than proportional to the number of elements_
+- _Implement `sort`to be no slower on average than `n*log(n)`, where `n` is the number of elements being sorted._
