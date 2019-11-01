@@ -28,4 +28,7 @@ istream& read_hw(istream& in, vector<double>& hw) {
 
 _A reference parameter without a `const` usually signals an intent to modify the object that is the function's argument.
 [...]
-Because we expect the function to modify its argument, we cannot call the function with just any expression. Instead, we must pass an **lvalue** argument to a reference parameter. An **lvalue** is a value that denotes a nontemporary object._
+
+Because we expect the function to modify its argument, we cannot call the function with just any expression. Instead, we must pass an **lvalue** argument to a reference parameter. An **lvalue** is a value that denotes a nontemporary object.
+
+[...] the `clear` member_ (in function `read_hw`) _behaves completely different for `istream` objects as it soes for `vector` objects. For `istream` objects, it resets any error indications so that input can continue; for `vector` objects, it discards any contents that the vector might havehad, leaving us with an empty vector again._
