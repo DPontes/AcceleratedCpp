@@ -29,6 +29,17 @@ istream& read_hw(istream& in, vector<double>& hw) {
 _A reference parameter without a `const` usually signals an intent to modify the object that is the function's argument._
 _[...]_
 
-_Because we expect the function to modify its argument, we cannot call the function with just any expression. Instead, we must pass an **lvalue** argument to a reference parameter. An **lvalue** is a value that denotes a nontemporary object.
+_Because we expect the function to modify its argument, we cannot call the function with just any expression. Instead, we must pass an **lvalue** argument to a reference parameter. An **lvalue** is a value that denotes a nontemporary object._
 
-[...] the `clear` member_ (in function `read_hw`) _behaves completely different for `istream` objects as it does for `vector` objects. For `istream` objects, it resets any error indications so that input can continue; for `vector` objects, it discards any contents that the vector might havehad, leaving us with an empty vector again._
+_[...] the `clear` member_ (in function `read_hw`) _behaves completely different for `istream` objects as it does for `vector` objects. For `istream` objects, it resets any error indications so that input can continue; for `vector` objects, it discards any contents that the vector might havehad, leaving us with an empty vector again._
+
+### 4.1.4 Three kinds of function parameters
+
+Functions `median`, `grade` and `read_hw` each treate their corresponding homework vector in a fundamentally different way.
+
+Funcion `median` has a parameter of type `vector<double>`. This means that the homework vector is **passed by value** into the function, in effect being copied into the function. The reason behind this is that we will want to change the vector when we use `sort` **but** we do not want the original vector to be changed.
+
+Function `grade` has a parameter of type `const vector<double>&`. The `&` asks the immplementation not to copy the argument, and the `const` promisses that the parameter will not be changed. This setup makes the program more efficient, as there is no necessity to copy the vector into the scope. This should be used when the input is of type `vector` or `string` and we do not want to change its content.
+
+Finally, the `read_hw` function has a parameter of type `vector <double>&`. With this implementation, the parameter will be bound directly to the argument (will not be copied into the scope). However, in this case the reason to avoid the copy is because we **want** to edit the argument's value.
+
