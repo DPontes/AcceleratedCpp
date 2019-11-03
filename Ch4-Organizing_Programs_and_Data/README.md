@@ -43,3 +43,12 @@ Function `grade` has a parameter of type `const vector<double>&`. The `&` asks t
 
 Finally, the `read_hw` function has a parameter of type `vector <double>&`. With this implementation, the parameter will be bound directly to the argument (will not be copied into the scope). However, in this case the reason to avoid the copy is because we **want** to edit the argument's value.
 
+## 4.2 Organizing Data
+
+(From the book) _We'll assume that we are given a file that contains many student's names and grades. Each name is followed by a midterm grade and final grade, and then by one or more homework assignment grades._
+
+_[...]Our program should calculate each student's overall grade using medians._
+
+_[...]In the output, we will want the report to be organized alphabetically by student, and we want the final grades to line up vertically so that they are easier to read. These requirements imply that we'll need a place to store the records for all students, so that we can alphabetize them. We''l also need to find the length of the longest name, so that we know how many spaces to put between each name and the corresponding grade._
+
+_[...]Assuming that we have a place to store the data about a single student, we can use a `vector` to hold the student's data. Once the `vector` contains data for all the students, we can `sort` it and then calculate and write each student's grades._
