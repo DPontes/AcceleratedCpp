@@ -1,6 +1,6 @@
 # Notes on the chapter
 
-We will look at two fundamental ways of organizing large programs offered by C++: functions and data structures. We will also look at the ability to divide our programs into files athat we can compile separately and combine after compilation.
+We will look at two fundamental ways of organizing large programs offered by C++: functions and data structures. We will also look at the ability to divide our programs into files so that we can compile separately and combine after compilation.
 
 ## 4.1 Organizing computations
 
