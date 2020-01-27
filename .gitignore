@@ -1,2 +1,4 @@
-*.out
-*.sw*
+# ignore files without extensions
+*       # ignore all files..
+!*.*    # but don't(!) ignore files with extensions..
+!*/     # and don't ignore directories
