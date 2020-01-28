@@ -31,7 +31,7 @@ _[...]_
 
 _Because we expect the function to modify its argument, we cannot call the function with just any expression. Instead, we must pass an **lvalue** argument to a reference parameter. An **lvalue** is a value that denotes a nontemporary object._
 
-_[...] the `clear` member_ (in function `read_hw`) _behaves completely different for `istream` objects as it does for `vector` objects. For `istream` objects, it resets any error indications so that input can continue; for `vector` objects, it discards any contents that the vector might havehad, leaving us with an empty vector again._
+_[...] the `clear` member_ (in function `read_hw`) _behaves completely different for `istream` objects as it does for `vector` objects. For `istream` objects, it resets any error indications so that input can continue; for `vector` objects, it discards any contents that the vector might have had, leaving us with an empty vector again._
 
 ### 4.1.4 Three kinds of function parameters
 
@@ -49,6 +49,12 @@ Finally, the `read_hw` function has a parameter of type `vector <double>&`. With
 
 _[...]Our program should calculate each student's overall grade using medians._
 
-_[...]In the output, we will want the report to be organized alphabetically by student, and we want the final grades to line up vertically so that they are easier to read. These requirements imply that we'll need a place to store the records for all students, so that we can alphabetize them. We''l also need to find the length of the longest name, so that we know how many spaces to put between each name and the corresponding grade._
+_[...]In the output, we will want the report to be organized alphabetically by student, and we want the final grades to line up vertically so that they are easier to read. These requirements imply that we'll need a place to store the records for all students, so that we can alphabetize them. We'll also need to find the length of the longest name, so that we know how many spaces to put between each name and the corresponding grade._
 
 _[...]Assuming that we have a place to store the data about a single student, we can use a `vector` to hold the student's data. Once the `vector` contains data for all the students, we can `sort` it and then calculate and write each student's grades._
+
+### 4.2.1 - Keeping all of a student's data together
+
+(From the book) _Because `Student_Info` is a type, we can use a `vector<Student_info>` object to hold information about an arbitrary number of students, just as we used a `vector<double>` object to hold an arbitrary number of homework grades._
+
+
