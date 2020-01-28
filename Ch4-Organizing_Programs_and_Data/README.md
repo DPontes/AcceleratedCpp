@@ -71,9 +71,12 @@ bool compare(const Student_info& x, const Student_info& y) {
 }
 ```
 
-_Having defined `compare`, we can sort the `vector` by passing the `compare` function as a third argument to the `sort` library function:
+_Having defined `compare`, we can sort the `vector` by passing the `compare` function as a third argument to the `sort` library function:_
 
 ```
 sort(students.begin(), students.end(), compare);
 ```
 
+### 4.2.3 - Generating the report
+
+(From the book) _[...] the call to the library function `max`, which is defined in the header `<algorithm>`. [...] It's arguments must both have the same type [...]. This requirement makes it essential for us to define `maxlen` to be a variable of type `string::size_type`; it won't do merely yo define it as an `int`._
