@@ -61,4 +61,19 @@ _[...]Assuming that we have a place to store the data about a single student, we
 
 (From the book) _There is no ambiguity in naming this function `read`, because the type of its second parameter will tell us what we're reading. Overloading will distinguish it from any other function called `read` that might read into another kind of structure._
 
-_We might reach end-of-file, or encounter input failure, at any point during this process. If so, the subsequent input attempts will do nothingm an when we return, `is` will be in the appropriate error state. Note that this behaviour relies on the fact that the `read_hw` function carefilluy leaves the input stream in an aerror state if it as already in such a state when we called `read_hw`._
+_We might reach end-of-file, or encounter input failure, at any point during this process. If so, the subsequent input attempts will do nothing, and when we return, `is` will be in the appropriate error state. Note that this behaviour relies on the fact that the `read_hw` function carefilluy leaves the input stream in an aerror state if it as already in such a state when we called `read_hw`._
+
+The last part to be defined is how to order the vector of students by alphabetical order. However, we cannot use the `sort` module out of the box. This is because `sort` bases its operation on the `<` operator, which would result in a compilation error if we were to compare instances of the `Student_info` struct directly. (From the book) _Fortunately, the `sort` function takes an optional third argument that is a *predicate*. A predicate is a function that yields a truth value, typically of type `bool`. [...] the `sort` function will use it to compare elements instead of using the `<` operator. Because we want to order the students alphabetically by name, we'll write our comparison function:_
+
+```
+bool compare(const Student_info& x, const Student_info& y) {
+    return x.name < y.name;
+}
+```
+
+_Having defined `compare`, we can sort the `vector` by passing the `compare` function as a third argument to the `sort` library function:
+
+```
+sort(students.begin(), students.end(), compare);
+```
+
