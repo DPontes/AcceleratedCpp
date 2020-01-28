@@ -57,4 +57,8 @@ _[...]Assuming that we have a place to store the data about a single student, we
 
 (From the book) _Because `Student_Info` is a type, we can use a `vector<Student_info>` object to hold information about an arbitrary number of students, just as we used a `vector<double>` object to hold an arbitrary number of homework grades._
 
+### 4.2.2 - Managing the student records
 
+(From the book) _There is no ambiguity in naming this function `read`, because the type of its second parameter will tell us what we're reading. Overloading will distinguish it from any other function called `read` that might read into another kind of structure.
+
+We might reach end-of-file, or encounter input failure, at any point during this process. If so, the subsequent input attempts will do nothingm an when we return, `is` will be in the appropriate error state. Note that this behaviour relies on the fact that the `read_hw` function carefilluy leaves the input stream in an aerror state if it as already in such a state when we called `read_hw`._
